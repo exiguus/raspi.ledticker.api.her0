@@ -1,0 +1,13 @@
+# /etc/cron.d/her0-ledticker
+#
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+#
+
+# check if ledticker is running and start if not
+*/6		*	*	*	*	root	/usr/local/sbin/ledticker/start.sh >/dev/null
+# fetch new data
+*/4		*	*	*	*	root	/usr/local/sbin/ledticker/curl.sh >/dev/null
+
+# sleep ticker till night and reset input
+# (also change the interval of start.sh and curl.sh)
+#0		1,10	*	*	*	root	/usr/local/sbin/ledticker/stop.sh >/dev/null
