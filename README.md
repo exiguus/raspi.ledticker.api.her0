@@ -28,8 +28,10 @@ Hardware requirements raspberry pi, led-dotmatrix 70x5 and sitecom USB to Serial
 * last line first item-id and last item-id
 
 ## Example
-request: api.php?action=realtime&type=plain&item=$ITEMID
-response plain/text:
+request
+    api.php?action=realtime&type=plain&item=$ITEMID
+
+response (plain/text)
     18:27:53 kevin Joins
     18:28:29 sasche Quits
     18:28:55 tobias Parts
